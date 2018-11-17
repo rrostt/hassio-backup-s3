@@ -8,4 +8,6 @@ Install, then set the config variables. You should create an s3-bucket, and crea
 
 Note: awskey is `access key id` and awssecret is `secret access key` in AWS lingo.
 
+To do a backup, click the Start button. It will create a new file with datetime appended to the filename each time.
+
 Contact: rrostt@gmail.com
