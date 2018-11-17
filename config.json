@@ -1,0 +1,19 @@
+{
+  "name": "Backup S3",
+  "version": "1.0",
+  "slug": "backup-s3",
+  "description": "Backup config to S3 bucket",
+  "startup": "before",
+  "boot": "auto",
+  "options": {
+    "awskey": "",
+    "awssecret": "",
+    "bucketname": ""
+  },
+  "schema": {
+    "awskey": "str",
+    "awssecret": "str",
+    "bucketname": "str"
+  },
+  "map": ["config:rw"]
+}
