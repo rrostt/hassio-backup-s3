@@ -1,5 +1,9 @@
 # Hassio Addon for Backing up to S3 Bucket
 
+Add-on for uploading backups of your Home Assistant configs to AWS S3.
+
+## Usage
+
 Save files in /addons/buckets3 on your hassio machine.
 
 Under the Add-on Store tab in the Hass.io view in HA you'll find the addon under Local add-ons.
