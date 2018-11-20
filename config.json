@@ -1,7 +1,7 @@
 {
   "name": "Backup S3",
   "version": "1.0",
-  "slug": "backup-s3",
+  "slug": "backup_s3",
   "description": "Backup config to S3 bucket",
   "startup": "before",
   "boot": "auto",
