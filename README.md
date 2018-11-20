@@ -1,8 +1,8 @@
 # Hassio Addon for Backing up to S3 Bucket
 
-Add-on for uploading backups of your Home Assistant configs to AWS S3.
+Add-on for uploading hass.io snapshots to AWS S3.
 
-## Usage
+## Installation
 
 Save files in /addons/buckets3 on your hassio machine.
 
@@ -12,6 +12,13 @@ Install, then set the config variables. You should create an s3-bucket, and crea
 
 Note: awskey is `access key id` and awssecret is `secret access key` in AWS lingo.
 
-To do a backup, click the Start button. It will create a new file with datetime appended to the filename each time.
+Next,
+
+1. Create a Snapshot in the hass.io view in HA.
+2. Click Start on the Backup S3 add-on.
+
+This will sync the /backup/ directory to the s3-bucket.
+
+Ideally you would automate this using automation.
 
 Contact: rrostt@gmail.com

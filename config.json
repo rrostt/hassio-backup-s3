@@ -15,5 +15,5 @@
     "awssecret": "str",
     "bucketname": "str"
   },
-  "map": ["config:rw"]
+  "map": ["backup:rw"]
 }
