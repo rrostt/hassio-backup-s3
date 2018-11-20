@@ -19,6 +19,37 @@ Next,
 
 This will sync the /backup/ directory to the s3-bucket.
 
-Ideally you would automate this using automation.
+Ideally you would automate this using automation:
+
+```
+# backups
+- alias: Make snapshot
+  trigger:
+    platform: time
+    at: '3:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+  action:
+    service: hassio.snapshot_full
+    data_template:
+      name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
+
+- alias: Upload to S3
+  trigger:
+    platform: time
+    at: '3:30:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+  action:
+    service: hassio.addon_start
+    data:
+      addon: local_backup_s3
+```
+
+The automation above first makes a snapshot at 3am, and then at 3.30am uploads to S3.
 
 Contact: rrostt@gmail.com
